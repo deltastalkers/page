@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>* (Well, there is not a page here.)</title>
+    <style>
+        body {
+            background-color: #000;
+            user-select: none;
+        }
+
+        a,
+        img {
+            width: 75vmin;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            image-rendering: pixelated;
+        }
+
+        a {
+            z-index: 10;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/">
+        <img src="/images/tree/1.png">
+        <img src="/images/tree/2.png">
+        <img src="/images/tree/3.png">
+    </a>
+
+    <script>
+        const t = n => document.querySelector(`img:nth-child(${n})`);
+        let siner = Math.random() * 600;
+        document.addEventListener("contextmenu", e => e.target.tagName === "IMG" ? e.preventDefault() : null);
+        setInterval(() => {
+            siner += 1;
+            const { width, height } = t(1).getBoundingClientRect();
+            const o = [Math.sin(siner / 12) * 2, Math.cos(siner / 20) * 2, Math.sin(siner / 14) * 1, Math.cos(siner / 24) * 1].map((x, i) => Math.floor(x * (i % 2 === 0 ? width / 105 : height / 91)));
+            t(2).style.transform = `translate(-50%, -50%) translateX(${o[0]}px) translateY(${o[1]}px)`;
+            t(3).style.transform = `translate(-50%, -50%) translateX(${o[2]}px) translateY(${o[3]}px)`;
+        }, 1000 / 15);
+    </script>
+</body>
+
+</html>
