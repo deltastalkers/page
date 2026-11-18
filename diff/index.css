@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+body,
+.d2h-file-header {
+    font-family: Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+code,
+.d2h-diff-table {
+    font-family: "JetBrains Mono", Menlo, Consolas, monospace;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+body {
+    text-align: center;
+}
+
+code {
+    background-color: hsl(0, 0%, 87.5%);
+    padding: 0.125em;
+    border-radius: 0.25em;
+}
+
+.details {
+    display: flex;
+    font-size: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid currentColor;
+    padding: 1em;
+    gap: 0.25em;
+    max-width: 100%;
+    text-align: left;
+
+    code,
+    a {
+        word-break: break-all;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin: auto;
+}
+
+a {
+    color: hsl(0, 0%, 44%);
+}
+
+.red {
+    color: hsl(0, 100%, 32%);
+}
+
+.green {
+    color: hsl(120, 100%, 32%);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #000;
+        color: #fff;
+    }
+
+    code {
+        background-color: hsl(0, 0%, 12.5%);
+    }
+
+    a {
+        color: hsl(0, 0%, 88%);
+    }
+
+    .red {
+        color: hsl(0, 100%, 64%);
+    }
+
+    .green {
+        color: hsl(120, 100%, 64%);
+    }
+}

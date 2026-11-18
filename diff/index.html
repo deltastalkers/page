@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deltastalkers | diff</title>
+    <style>
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css') (prefers-color-scheme: light);
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css') (prefers-color-scheme: dark);
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui.min.js"></script>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="container" style="display: none;">
+        <div class="details">
+            <div class="inner">
+                <b class="red">Old:</b>
+                <span>Hash (SHA256): <code id="oldhash"></code></span>
+                <span>Archive: <a href="" target="_blank" id="oldurl"></a></span>
+            </div>
+            <div class="inner">
+                <b class="green">New:</b>
+                <span>Hash (SHA256): <code id="newhash"></code></span>
+                <span>Archive: <a href="" target="_blank" id="newurl"></a></span>
+            </div>
+        </div>
+        <div id="diff"></div>
+    </div>
+</body>
+
+</html>
