@@ -10,9 +10,9 @@
         body {
             background-color: #000;
             user-select: none;
+            pointer-events: none;
         }
 
-        a,
         img {
             width: 75vmin;
             position: absolute;
@@ -21,24 +21,17 @@
             transform: translate(-50%, -50%);
             image-rendering: pixelated;
         }
-
-        a {
-            z-index: 10;
-        }
     </style>
 </head>
 
 <body>
-    <a href="/">
-        <img src="/images/tree/1.png">
-        <img src="/images/tree/2.png">
-        <img src="/images/tree/3.png">
-    </a>
+    <img src="/images/tree/1.png">
+    <img src="/images/tree/2.png">
+    <img src="/images/tree/3.png">
 
     <script>
         const t = n => document.querySelector(`img:nth-child(${n})`);
         let siner = Math.random() * 600;
-        document.addEventListener("contextmenu", e => e.target.tagName === "IMG" ? e.preventDefault() : null);
         setInterval(() => {
             siner += 1;
             const { width, height } = t(1).getBoundingClientRect();

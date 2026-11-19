@@ -40,7 +40,27 @@
                 <span>Archive: <a href="" target="_blank" id="newurl"></a></span>
             </div>
         </div>
-        <div id="diff"></div>
+        <div class="diff">
+            <div class="controls">
+                <div>
+                    <label for="matching">Matching:</label>
+                    <select id="matching">
+                        <option selected value="words">Words</option>
+                        <option value="lines">Lines</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="outputFormat">Output Format:</label>
+                    <select id="outputFormat">
+                        <option selected value="side-by-side">Side by Side</option>
+                        <option value="line-by-line">Line by Line</option>
+                    </select>
+                </div>
+                <a id="download">Download Diff</a>
+            </div>
+            <div id="diff"></div>
+        </div>
     </div>
 </body>
 
